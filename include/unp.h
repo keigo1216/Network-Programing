@@ -14,6 +14,7 @@
 #include<stdlib.h>
 #include<signal.h>
 #include<sys/wait.h>
+#include<stdbool.h>
 
 //-------------------------------------------------
 // マクロ定義
@@ -35,5 +36,6 @@ ssize_t readline(int fd, char *vptr, size_t maxlen);
 void str_echo(int sockfd);
 void str_cli(FILE *fp, int sockfd);
 int max(int a, int b);
+void sig_child(int signo);
 
 #endif
